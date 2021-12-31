@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+//import {useIdleTimer} from 'react-idle-timer';
 import './App.css';
+import Idle from './components/Idle';
+//import Kofesto from './components/Kofesto';
 
 function App() {
+  /*
+  const handleOnIdle = event => {
+    console.log('user is idle', event)
+    console.log('last active', getLastActiveTime())
+  }
+
+  const handleOnActive = event => {
+    console.log('user is active', event)
+    console.log('time remaining', getRemainingTime())
+  }
+
+  const handleOnAction = event => {
+    console.log('user did something', event)
+  }
+
+  const { getRemainingTime, getLastActiveTime } = useIdleTimer({
+    timeout: 1000  * 8,
+    onIdle: handleOnIdle,
+    onActive: handleOnActive,
+    onAction: handleOnAction,
+    debounce: 500,
+    crossTab: true
+  })
+  */
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <h2>Hello world, welcome to react timer</h2>
+    <Idle/>
+    </>
   );
 }
 
