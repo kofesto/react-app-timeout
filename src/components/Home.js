@@ -1,15 +1,15 @@
-//import React from 'react';
-import {useIdleTimer} from 'react-idle-timer';
-import {useNavigate} from 'react-router-dom';
-//import Kofesto from './Kofesto';
+// import {useIdleTimer} from 'react-idle-timer';
+// import {useNavigate} from 'react-router-dom';
+import Idle from "./Idle"
 
-function Idle(props) {
-    let navigate = useNavigate()
+function Home() {
+    /*
+    let navigate = useNavigate();
     const handleOnIdle = event => {
         console.log('user is idle', event)
         console.log('last active', getLastActiveTime());
+        //<Route path="/" element={<Navigate replace to="/timer" />} />
         navigate('/timer');
-        //window.history.replaceState('/timer');
       }
     
       const handleOnActive = event => {
@@ -29,8 +29,13 @@ function Idle(props) {
         debounce: 500,
         crossTab: true
       })
-    
-    return true;
+    */
+    return (
+        <div>
+            <Idle/>
+            <h2>Hello world, welcome to react timer</h2>
+        </div>
+    )
 }
 
-export default Idle;
+export default Home

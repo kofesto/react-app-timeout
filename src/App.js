@@ -1,7 +1,9 @@
 //import {useIdleTimer} from 'react-idle-timer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Idle from './components/Idle';
-//import Kofesto from './components/Kofesto';
+import Home from './components/Home';
+import Kofesto from './components/Kofesto';
+//import Idle from './components/Idle';
 
 function App() {
   /*
@@ -30,8 +32,12 @@ function App() {
   */
   return (
     <>
-    <h2>Hello world, welcome to react timer</h2>
-    <Idle/>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/timer" element={<Kofesto />} />
+      </Routes>
+    </Router>
     </>
   );
 }
